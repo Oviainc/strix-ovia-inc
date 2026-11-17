@@ -1,3 +1,26 @@
+![Ovia Inc — Strix product screenshot, from the upstream repository's own assets](.github/screenshot.png)
+
+## Ovia Inc — Strix fork
+
+This repository is a fork of [usestrix/strix](https://github.com/usestrix/strix), held in the Ovia Inc collection for evaluation. Modifications by Ovia Inc: this header (Ovia section, story, and reference note), added November 2026 as part of the import pass that widened the collection beyond the weekly digest. Upstream code and content are otherwise unchanged from the fork point, except where a later commit says so. All credit for the project belongs to the upstream authors and contributors; the licence is Apache-2.0, as recorded in the upstream repository.
+
+### What this is
+
+Strix is an open-source AI penetration testing tool. Autonomous agents probe an application for vulnerabilities and help fix what they find — the project describes them as autonomous hackers working the app the way a tester would. It integrates with GitHub Actions and CI/CD pipelines, so a scan can run on every pull request and block insecure code before it reaches production.
+
+### Story
+
+Security testing has a scheduling problem: penetration tests happen rarely, by appointment, while code ships daily. The agent turn in security tooling answers that gap with testers that run at build speed, inside the pipeline, on every change. The collection's security shelf held the defensive half — trufflehog hunting leaked credentials in code — and nothing that tests a running application from the outside. Strix is that missing half, and its rise has been public: the project reached the top of GitHub Trending during the week this fork was taken, which is usually a sign the category has found its moment. We forked usestrix/strix in November 2026 to evaluate agent-driven testing as part of the studio's security line — on our own systems first, where the findings are ours to fix.
+
+### What we evaluate
+
+- Finding quality on known-vulnerable test applications: real vulnerabilities versus noise, and the precision of the reported locations.
+- The fix loop: whether the suggested remediations are correct and safe to apply.
+- CI behaviour — scan time per pull request, failure modes, and how a block reads to a developer who did not ask for a security review.
+- Guardrails: scope control, rate behaviour against target systems, and what an operator must configure before an autonomous tester is pointed anywhere.
+
+---
+
 <p align="center">
   <a href="https://strix.ai/">
     <img src="https://github.com/usestrix/.github/raw/main/imgs/cover.png" alt="Strix Banner" width="100%">
